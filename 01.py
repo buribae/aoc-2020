@@ -36,7 +36,7 @@ def part1(data):
             return n * (2020 - n)
 
 
-print(read_data("day01", part1))
+print(solution("day01", part1, split_parser))
 
 # ----------- TEST
 test1 = """
@@ -74,4 +74,4 @@ def part2(data):
                 return expense * o * (target - o)
 
 
-print(read_data("day01", part2))
+print(solution("day01", part2, split_parser))
