@@ -1,6 +1,5 @@
 def solution(filename, function, parser):
-    with open(f"data/{filename}") as f:
-        return function(parser(f))
+    return function(get_data(filename, parser))
 
 
 def split_parser(file):
@@ -9,3 +8,8 @@ def split_parser(file):
 
 def line_parser(file):
     return file.read().splitlines()
+
+
+def get_data(filename, parser):
+    with open(f"data/{filename}") as f:
+        return parser(f)
