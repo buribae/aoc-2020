@@ -118,7 +118,6 @@ def part2(data: List[str]) -> int:
     int_data = [int(x) for x in data]
     target = part1(data)
 
-    total = 0
     start, stop = 0, 2
 
     while True:
