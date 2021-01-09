@@ -168,19 +168,6 @@ print(part1(data))
 # What is the total number of distinct ways you can arrange the adapters to connect the charging outlet to your device?
 
 
-def diff_count(data: List[int]) -> List[int]:
-    difference_count = [0, 0, 0, 1]  # account last difference (3)
-    sorted_data = sorted(data)
-
-    # First one should be 1,2, or 3
-    difference_count[sorted_data[0]] += 1
-
-    for x, y in zip(sorted_data[:-1], sorted_data[1:]):
-        difference_count[y - x] += 1
-
-    return difference_count
-
-
 def part2(data: List[int]) -> int:
 
     comb = [1, 1, 2, 4, 7, 13]
